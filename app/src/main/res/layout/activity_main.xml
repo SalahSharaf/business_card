@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.business_card.MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/uber" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:text="Get there , Your day belongs to you"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="24dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryLight"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Description "
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp" />
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/expandable_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:background="@color/colorShadowy"
+            android:padding="10dp"
+            app:animDuration="400"
+            app:maxCollapsedLines="3">
+
+            <TextView
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/expand_collapse"
+                android:layout_width="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:background="#00ffffff" />
+
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+        <View
+            android:id="@+id/devider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/devider"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="@string/san_francisco_california_united_states"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:onClick="googleMapsIntent"/>
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_language_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="@string/www_uber_com"
+            android:textColor="@color/colorAccent"
+            android:onClick="webIntent"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/website"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="@string/numbersContact"
+            android:textColor="@color/colorAccent"
+            android:onClick="phoneIntent"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
