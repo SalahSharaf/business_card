@@ -16,30 +16,32 @@
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/bars_margin_top"
+        android:background="@color/colorPrimaryLight"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/welcome_text_padding"
         android:text="Get there , Your day belongs to you"
         android:textColor="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="24sp"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorPrimaryLight"
-        android:layout_height="wrap_content" />
+        android:textSize="@dimen/colored_bar_size" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/big_wrraper_margin_top"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="@dimen/description_margin_left"
             android:text="Description "
             android:textColor="@color/colorAccent"
-            android:textSize="30sp" />
+            android:textSize="@dimen/description_size" />
 
         <com.ms.square.android.expandabletextview.ExpandableTextView
             android:id="@+id/expandable_text_view"
@@ -47,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/description"
             android:background="@color/colorShadowy"
-            android:padding="10dp"
+            android:padding="@dimen/padding_10"
             app:animDuration="400"
             app:maxCollapsedLines="3">
 
@@ -78,41 +80,44 @@
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/devider"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/devider"
+            android:layout_marginLeft="@dimen/bars_margin_left"
+            android:layout_marginTop="@dimen/bars_devider_margin"
             android:drawableLeft="@drawable/ic_location_on_black_24dp"
             android:drawablePadding="10dp"
+            android:onClick="googleMapsIntent"
             android:text="@string/san_francisco_california_united_states"
             android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            android:onClick="googleMapsIntent"/>
+            android:textSize="@dimen/bars_text_sizes" />
 
         <TextView
             android:id="@+id/website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/location"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/bars_margin_left"
             android:drawableLeft="@drawable/ic_language_black_24dp"
             android:drawablePadding="10dp"
+            android:layout_marginTop="@dimen/bars_margin_top"
             android:text="@string/www_uber_com"
             android:textColor="@color/colorAccent"
             android:onClick="webIntent"
-            android:textSize="24sp" />
+            android:textSize="@dimen/bars_text_sizes" />
 
         <TextView
             android:id="@+id/phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/website"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/bars_margin_left"
             android:drawableLeft="@drawable/ic_local_phone_black_24dp"
             android:drawablePadding="10dp"
+            android:layout_marginTop="@dimen/bars_margin_top"
             android:text="@string/numbersContact"
             android:textColor="@color/colorAccent"
             android:onClick="phoneIntent"
-            android:textSize="24sp" />
+            android:textSize="@dimen/bars_text_sizes" />
 
     </RelativeLayout>
 </RelativeLayout>
