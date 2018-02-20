@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/description_margin_left"
             android:text="Description "
+            android:fontFamily="sans-serif-condensed"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/description_size" />
 
@@ -87,6 +88,7 @@
             android:drawableLeft="@drawable/ic_location_on_black_24dp"
             android:drawablePadding="10dp"
             android:onClick="googleMapsIntent"
+            android:fontFamily="sans-serif-condensed"
             android:text="@string/san_francisco_california_united_states"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/bars_text_sizes" />
@@ -103,6 +105,7 @@
             android:text="@string/www_uber_com"
             android:textColor="@color/colorAccent"
             android:onClick="webIntent"
+            android:fontFamily="sans-serif-condensed"
             android:textSize="@dimen/bars_text_sizes" />
 
         <TextView
@@ -117,6 +120,7 @@
             android:text="@string/numbersContact"
             android:textColor="@color/colorAccent"
             android:onClick="phoneIntent"
+            android:fontFamily="sans-serif-condensed"
             android:textSize="@dimen/bars_text_sizes" />
 
     </RelativeLayout>
