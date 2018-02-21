@@ -54,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void googleMapsIntent(View view) {
-        String uri = Uri.encode("San Francisco, California, United States");
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+        //String uri = Uri.encode("San Francisco, California, United States");
+        Uri uri = Uri.parse("geo:26.2992,52.6692?q=San Francisco, California, United States");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(mapIntent);
