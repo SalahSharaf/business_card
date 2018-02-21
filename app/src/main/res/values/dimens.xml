@@ -11,4 +11,6 @@
     <dimen name="colored_bar_size">20sp</dimen>
     <dimen name="bars_devider_margin">10dp</dimen>
     <dimen name="bars_text_sizes">20sp</dimen>
+    <dimen name="editableText_size">18sp</dimen>
+    <dimen name="colored_text_height">120dp</dimen>
 </resources>

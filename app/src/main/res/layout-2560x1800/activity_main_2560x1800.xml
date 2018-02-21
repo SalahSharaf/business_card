@@ -16,7 +16,8 @@
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/colored_text_height"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/bars_margin_top"
@@ -35,9 +36,9 @@
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/description_margin_left"
+            android:textAlignment="center"
             android:text="Description"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/description_size" />
@@ -57,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp" />
+                android:textSize="@dimen/editableText_size" />
 
             <ImageButton
                 android:id="@+id/expand_collapse"
@@ -77,26 +78,27 @@
 
         <TextView
             android:id="@+id/location"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="80dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/website"
             android:layout_below="@+id/divider"
             android:layout_marginTop="@dimen/bars_devider_margin"
+            android:layout_toEndOf="@+id/expandable_text_view"
             android:drawableLeft="@drawable/ic_location_on_black_24dp"
             android:drawablePadding="10dp"
-            android:textAlignment="center"
             android:fontFamily="sans-serif-condensed"
             android:onClick="googleMapsIntent"
             android:text="@string/san_francisco_california_united_states"
+            android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/bars_text_sizes" />
 
         <TextView
             android:id="@+id/website"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
             android:layout_below="@id/location"
-            android:layout_marginLeft="@dimen/bars_margin_left"
             android:layout_marginTop="@dimen/bars_margin_top"
             android:drawableLeft="@drawable/ic_language_black_24dp"
             android:drawablePadding="10dp"
@@ -109,14 +111,14 @@
 
         <TextView
             android:id="@+id/phoneNumber"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/website"
-            android:layout_marginLeft="@dimen/bars_margin_left"
             android:layout_marginTop="@dimen/bars_margin_top"
             android:drawableLeft="@drawable/ic_local_phone_black_24dp"
             android:drawablePadding="10dp"
-            android:fontFamily="sa"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginHorizontal="80dp"
             android:onClick="phoneIntent"
             android:text="@string/numbersContact"
             android:textColor="@color/colorAccent"
